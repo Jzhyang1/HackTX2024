@@ -23,7 +23,7 @@
     div {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        width: 100%;
     }
     
     div > * {
@@ -37,5 +37,9 @@
     
     img {
         margin-top: 0;
+    }
+    
+    span {
+        margin-left: auto;
     }
 </style>
