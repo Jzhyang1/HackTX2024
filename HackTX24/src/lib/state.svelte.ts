@@ -3,13 +3,12 @@ import { on } from "./socket.svelte";
 import NameScreen from "../components/NameScreen.svelte";
 import ReadyScreen from "../components/ReadyScreen.svelte";
 import GameDisplay from "../components/game/GameDisplay.svelte";
-import GameOverScreen from "../components/GameOverScreen.svelte";
 import * as worker_threads from "node:worker_threads";
 import { writable } from "svelte/store";
 
 // state, i think its self explanatory for the most part
 // this part is not the actual game-related part
-export let display: { page: Component } = $state({ page: GameOverScreen });
+export let display: { page: Component } = $state({ page: NameScreen });
 
 export function finishNameScreen(goodNameValue: string) {
   console.log("finished name screen with value: ", goodNameValue);
