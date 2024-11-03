@@ -8,13 +8,17 @@
     let {data}: Props = $props();
 </script>
 
-<div>
-    <span>{data.username}</span>
+<li>
+    <span style="color: #aa16ff">{data.username}:</span>
     <span>{data.text}</span>
-</div>
+</li>
 
 <style>
-    div {
-        
+    li {
+        display: flex;
+        float: left;
+        width: auto;
+        flex-direction: row;
+        flex-shrink: 2;
     }
 </style>

@@ -9,7 +9,7 @@
   const name = "sdf";
 </script>
 
-<div class="vert_holder">
+<div class="container">
   <div class="card">
     <div class="players">
       {#each game.players as player}
@@ -32,7 +32,7 @@
 </div>
 
 <style>
-  .vert_holder {
+  .container {
     display: flex;
     flex-direction: column;
     font-family: "hun", serif;

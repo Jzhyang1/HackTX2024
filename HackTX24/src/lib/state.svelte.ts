@@ -5,6 +5,7 @@ import ReadyScreen from "../components/ReadyScreen.svelte";
 import GameDisplay from "../components/game/GameDisplay.svelte";
 import GameOverScreen from "../components/GameOverScreen.svelte";
 import * as worker_threads from "node:worker_threads";
+import { writable } from "svelte/store";
 
 // state, i think its self explanatory for the most part
 // this part is not the actual game-related part
@@ -41,6 +42,7 @@ export let gameState: {
     gameWord?: string;
     players: string[];
     imposters?: string[];
+    lastVoteTime: number;
   };
   threads: {
     id: number;
@@ -95,3 +97,5 @@ on("thread_set", (data) => {
   gameState.threads = data.threadInfo;
   console.log("setting entire thread information");
 });
+
+export let selectPlayer = writable<0 | undefined | string>(undefined);
