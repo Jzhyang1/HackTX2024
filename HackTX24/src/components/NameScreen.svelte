@@ -23,7 +23,7 @@
 
 <div style="opacity: 0.95;">
   <form on:submit|preventDefault={submit}>
-    <p class="title">Spyfall</p>
+    <p class="title">GPTFall</p>
     <input bind:value={name} placeholder="Enter your name" />
     <button disabled={name === "" || inProcess}>submit!</button>
 
